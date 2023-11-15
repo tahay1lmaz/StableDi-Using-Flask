@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Ty API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="container">
+	<h1>Task2 img2banner</h1>
+
+  {{ img_tag|safe }}
+  <form action="{{ url_for('task2')}}"method="post" enctype="multipart/form-data">
+    <input type="file" name="file2" id="file"><br>
+    <input type="text" name="hex_code2" placeholder="Please enter #FFFFFF (HexCODE)" required="required" />
+    <input type="text" name="punch_line" placeholder="Punchline" required="required" />
+    <input type="text" name="button_text" placeholder="Button text" required="required" />
+    <button type="submit" class="btn btn-primary btn-block btn-large" value="Upload" >GO</button>
+  <div>
+</div>
+
+ </div>
+
+
+</body>
+</html>
